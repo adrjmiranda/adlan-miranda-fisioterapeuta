@@ -1,1 +1,66 @@
 @import '../../sass/base';
+
+.footer {
+	background-color: $primary-color;
+	padding: 100px 0;
+	color: $primary-bg-color;
+
+	.content {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		.footer_left,
+		.footer_right {
+			display: flex;
+		}
+
+		.footer_left {
+			flex: 5;
+			justify-content: start;
+			flex-direction: column;
+			gap: 2rem;
+
+			h4 {
+				font-size: 1.5rem;
+				font-family: 'Fjalla One', sans-serif;
+			}
+
+			p {
+				text-align: justify;
+				line-height: 2;
+
+				&::first-letter {
+					margin-left: 1.1rem;
+				}
+			}
+		}
+
+		.footer_right {
+			flex: 5;
+			align-items: end;
+			flex-direction: column;
+			gap: 3rem;
+
+			h5 {
+				font-size: 1.2rem;
+			}
+
+			.social_links {
+				display: flex;
+				gap: 3rem;
+
+				a svg {
+					font-size: 2.5rem;
+					color: $secondary-bg-color;
+					transition: all 0.5s ease;
+				}
+
+				a:hover svg {
+					transform: scale(1.2);
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}
