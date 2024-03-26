@@ -36,12 +36,14 @@ const services = [
 
 const Services: FunctionComponent = (): ReactNode => {
 	return (
-		<div className='wrapper'>
-			<div className={styles.services}>
-				<h2 className='session_title'>Minhas Especialidades</h2>
-				{services.map((service) => (
-					<ServiceCard service={service} key={service.id} />
-				))}
+		<div className={styles.services}>
+			<h2 className='session_title'>Minhas Especialidades</h2>
+			<div className='wrapper'>
+				<div className={styles.info}>
+					{services.map((service) => (
+						<ServiceCard service={service} key={service.id} />
+					))}
+				</div>
 			</div>
 		</div>
 	);

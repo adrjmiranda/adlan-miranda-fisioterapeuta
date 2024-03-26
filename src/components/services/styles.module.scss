@@ -1,9 +1,13 @@
 @import '../../sass/base';
 
 .services {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	padding: 280px 0;
-	flex-wrap: wrap;
+	padding: 180px 0;
+	margin-top: 3rem;
+	background-color: $secondary-bg-color;
+
+	.info {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
 }

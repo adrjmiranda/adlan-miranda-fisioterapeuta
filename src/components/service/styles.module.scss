@@ -1,0 +1,80 @@
+@import '../../sass/base';
+
+.service {
+	padding: 80px 0;
+
+	.info {
+		display: flex;
+		gap: 3rem;
+		align-items: center;
+		cursor: pointer;
+
+		&:hover .description p {
+			color: $primary-text-color;
+			background-color: $secondary-bg-color;
+			transform: scale(1.01);
+		}
+
+		&:hover .img img {
+			transform: scale(1.01);
+		}
+
+		.description,
+		.img {
+			flex: 5;
+		}
+
+		.description {
+			height: 100%;
+
+			p {
+				transition: all 0.5s ease;
+				text-align: justify;
+				font-size: 1.1rem;
+				line-height: 2;
+				font-weight: 500;
+				color: $secondary-text-color;
+				height: 100%;
+				border-radius: 5px;
+				padding: 0.5rem;
+			}
+
+			p::first-letter {
+				margin-left: 2.2rem;
+			}
+		}
+
+		.img {
+			position: relative;
+
+			img {
+				max-width: 100%;
+				border-radius: 5px;
+				object-fit: cover;
+				transition: all 0.5s ease;
+			}
+		}
+
+		.img::before {
+			border-radius: 5px;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-shadow: 2px 2px $primary-color;
+			height: 100%;
+			width: 100%;
+		}
+
+		.img::after {
+			border-radius: 5px;
+			content: '';
+			position: absolute;
+			top: -1rem;
+			left: -0.5rem;
+			box-shadow: 2px 2px $secondary-color;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
