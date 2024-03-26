@@ -31,3 +31,13 @@ ul {
 	font-size: 3rem;
 	color: $primary-color;
 }
+
+@media screen and (max-width: 830px) {
+	.wrapper {
+		padding: 0 1rem;
+	}
+
+	.session_title {
+		font-size: 2rem;
+	}
+}

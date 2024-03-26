@@ -36,7 +36,7 @@ const services = [
 
 const Services: FunctionComponent = (): ReactNode => {
 	return (
-		<div className={styles.services}>
+		<div className={styles.services} id='services'>
 			<h2 className='session_title'>Minhas Especialidades</h2>
 			<div className='wrapper'>
 				<div className={styles.info}>

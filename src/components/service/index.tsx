@@ -8,7 +8,7 @@ const Service: FunctionComponent<{ service: ServiceData }> = ({
 	service,
 }): ReactNode => {
 	return (
-		<div className={styles.service}>
+		<div className={styles.service} id={'service' + service.id.toString()}>
 			<h3 className='session_title'>{service.title}</h3>
 			<div className='wrapper'>
 				<div
