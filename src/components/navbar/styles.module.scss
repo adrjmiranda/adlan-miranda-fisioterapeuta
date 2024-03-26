@@ -5,6 +5,15 @@
 	top: 0;
 	z-index: 999;
 
+	&.navbar {
+		background-color: transparent;
+		transition: background-color 0.3s ease;
+	}
+
+	&.navbar-scroll {
+		background-color: #ffffff;
+	}
+
 	nav {
 		display: flex;
 		justify-content: space-between;

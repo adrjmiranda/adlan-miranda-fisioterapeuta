@@ -1,11 +1,28 @@
-import { FunctionComponent, ReactNode } from 'react';
+import { FunctionComponent, ReactNode, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 // Styles
 import styles from './styles.module.scss';
 
 const Navbar: FunctionComponent = (): ReactNode => {
+	const [isTop, setIsTop] = useState<boolean>(true);
+	const { scrollY } = useScroll();
+	const backgroundColor = useTransform(
+		scrollY,
+		[0, 100],
+		['transparent', '#ffffff']
+	);
+
+	scrollY.onChange(() => {
+		setIsTop(scrollY.get() === 0);
+	});
+
 	return (
-		<div className={styles.navbar}>
+		<motion.div
+			style={{ backgroundColor }}
+			className={`${styles.navbar} ${isTop ? 'navbar-top' : 'navbar-scroll'}`}
+			transition={{ duration: 0.5 }}
+		>
 			<div className='wrapper'>
 				<nav>
 					<div className={styles.logo}>
@@ -33,7 +50,7 @@ const Navbar: FunctionComponent = (): ReactNode => {
 					</ul>
 				</nav>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
