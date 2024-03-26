@@ -1,0 +1,18 @@
+@import '../../sass/base';
+
+.service_card {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.icon svg {
+		font-size: 8rem;
+		color: $secondary-color;
+	}
+
+	.name {
+		font-size: 1.5rem;
+	}
+}

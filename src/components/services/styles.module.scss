@@ -1,1 +1,9 @@
 @import '../../sass/base';
+
+.services {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 280px 0;
+	flex-wrap: wrap;
+}
